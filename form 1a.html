@@ -1,0 +1,38 @@
+
+<!DOCTYPEHTML html>
+<html>
+	<body>
+		<script type ="text/javascript">
+		function WriteToFile(passForm){
+			set fso= CreateObject("Scrpting.File.SystemObject");
+			set s= fso.CreateTextFile("c:\test.txt", True);
+			s.writeline(document.passform.LastName.value);
+			s.writeline(document.passform.FirstName.value);
+			s.writeline(document.passform.E-Mail.value);
+			s.Close();
+		}
+		</script>
+
+		<form onsubmit="WriteToFile();" class="my-form">
+		
+		</form>
+	</body>
+		<form action="my-form-page" method="post"</form>
+			<div>
+			<label for="name">Last Name:</label>
+			<input type="text" id="name"/>
+			</div>
+			<div>
+			<label for="name">First Name:</label>
+			<input type="text" id="name"/>
+			</div>
+			<div>
+			<label for="mail">E-Mail:</label>
+			<input type="email" id="mail"/>
+			</div>
+			<div class="button">
+				<button type="submit">Submit</button>
+			</div>
+	
+</html>
+

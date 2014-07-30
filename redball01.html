@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Red Ball Zero One</title>
+		<script>
+		function sayhello()
+        {
+		alert("Hi Andrew");
+        }
+		function moveleft()
+		{
+			redball.left=redball.left -30;
+		}
+		function movetop()
+		{
+			redball.top=redball.top -30;
+		}
+		function moveright()
+		{
+			redball.left=redball.left +30;
+		}
+		function movebottom()
+		{
+			redball.top=redball.top +30;
+		}
+		function northwest()
+		{
+			redball.top=redball.top -10
+			redball.left=redball.left -10;
+		}
+		function southeast()
+		{
+			redball.top=redball.top +15
+			redball.left=redball.left -15;
+		}
+		function northeast()
+		{
+			redball.top=redball.top -10
+			redball.left=redball.left +10;
+		}
+		function southwest()
+		{
+			redball.top=redball.top +15
+			redball.left=redball.left +15;
+		}
+		function square()
+		{
+        	for (i = 0; i < 8; i++) { 
+             redball.top=redball.top+25;
+         	}  
+         	for (i = 0; i < 8; i++) { 
+             redball.left=redball.left-25;
+         	}  
+         	for (i = 0; i < 8; i++) {
+			redball.top=redball.top-25;
+			}   
+			for (i = 0; i < 8; i++) {
+			redball.left=redball.left+25;
+			}
+		}
+		function bounce()
+		{
+			redball.top=redball.top -95
+			redball.left=redball.left +95;
+			redball.top=redball.top +470
+			redball.left=redball.left +470;
+			redball.top=redball.top -380
+			redball.left=redball.left +380;
+			redball.left=redball.left -945;
+		}
+	
+		
+
+              </script>
+	
+          <script src="http://lrn.icstars.org/redball.js"></script>
+	</head>
+	<body>
+	<table>
+		<img id="redball" src="redball.jpg"/>
+		<table border="1px">
+		
+
+		<tr>
+		<td><button onclick="sayhello();">Andrew's Button</button></td>
+		<td><button onclick="moveleft();">Left Button</button></td>
+		<td><button onclick="movetop();">Top Button</button></td>
+		</tr>
+		<tr>
+		<td><button onclick="moveright();">Right Button</button></td>
+		<td><button onclick="movebottom();">Bottom Button</button></td>
+		<td><button onclick="northwest();">Northwest</button></td>
+		</tr>
+		<tr>
+		<td><button onclick="southeast();">Southeast</button></td>
+		<td><button onclick="northeast();">Northeast</button></td>
+		<td><button onclick="southwest();">Southwest</button></td>
+		</tr>
+		<tr>
+		<td><button onclick="square();">Square</button></td>
+		<td><button onclick="triangle();">Triangle</button></td>
+		<td><button onclick="bounce();">Bounce</button></td>
+		</tr>
+		</table>
+	</body>
+	
+</html>
+																			

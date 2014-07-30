@@ -1,0 +1,10 @@
+document.write("<!--*\n");
+document.write("var aolAdId=\"3565308|5\";\n");
+document.write("var aolSize=\"300|250\";\n");
+document.write("*-->\n");
+document.write("<SCR"+"IPT language='JavaScript1.1' SRC=\"http://at.atwola.com/addyn/3.0/5071.254/-1/0/170/noperf=1;alias=93306658;click=http%3A//at.atwola.com/adlink%2F5113%2F1275844%2F0%2F170%2FAdId%3D3565308%3BBnId%3D5%3Bitime%3D98948323%3Bnodecode%3Dyes%3Bimpref%3D14040989492986622665%3Blink%3D;ord=98948323?\">\n");
+document.write("</SCR"+"IPT>\n");
+
+
+
+

@@ -1,0 +1,47 @@
+</p>
+<!DOCTYPEHTML html>
+<html lang="en">
+	<body>
+		<script src= "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src= "jquery.serializeJSON.min.js"></script>
+		$(document).ready(function(){
+		$("#simplepost").click(function(e){
+		var MyForm = $ ("#ajaxform") .serializeJSON();
+		console.log(MyForm);
+		$.ajax(
+		{
+		url : "submit.php",
+		type : "POST",
+		data : {valArray:MyForm},
+		success:function(maindta){
+		alert(maindta);
+		}
+		error: function(jqXHR, testStatus, errorThrown){
+		}
+		});
+		e.preventDefault();
+		});
+		});</script>
+	</body>
+		<div id="<span id="IL_AD3" class="IL_AD">message</span> </div>
+		
+		<form name= "ajaxform" id= "ajaxform" method="post">
+			<div>
+			<label for="name">Last Name:</label>
+			<input type="text" id="name"/>
+			</div>
+			<div>
+			<label for="name">First Name:</label>
+			<input type="text" id="name"/>
+			</div>
+			<div>
+			<label for="mail">E-Mail:</label>
+			<input type="email" id="mail"/>
+			</div>
+			<div class="button">
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+</html>
+
+<span style="text-align: justify;">

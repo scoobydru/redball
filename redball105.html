@@ -1,0 +1,148 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<style>
+	
+	#redball{
+
+		position: absolute;
+		left:50px;
+		top:50px;
+	}
+</style>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script>
+		$( document ).ready(function() {
+    	console.log( "ready!" );
+		$("#redball").fadeOut("slow");
+		$("#redball").fadeIn("slow");
+		$("#redball").animate({ "left": "+=500px" }, "slow" );
+		$("#redball").animate({ "left": "-=500px" }, "slow" );
+		
+        
+		});
+    </script>
+</head>
+<body>
+<img id="redball" src="redball.jpg"/>
+
+		<table border="1px"; align="center">
+		
+
+		<tr>
+		<td><button id="sayhello">Andrew's Button</button></td> 
+		<td><button id="moveleft">Left Button</button></td>
+		
+		<td><button id="movetop">Top Button</button></td>
+		</tr>
+		<tr>
+		<td><button id="moveright">Right Button</button></td>
+		<td><button id="movebottom">Bottom Button</button></td>
+		<td><button id="northwest">Northwest</button></td>
+		</tr>
+		<tr>
+		<td><button id="southeast">Southeast</button></td>
+		<td><button id="northeast">Northeast</button></td>
+		<td><button id="southwest">Southwest</button></td>
+		</tr>
+		<tr>
+		<td><button id="square">Square</button></td>
+		<td><button id="triangle">Triangle</button></td>
+		<td><button id="bounce">Bounce</button></td>
+		</tr>
+		<tr>
+		<td><button id="ocatgon">Ocatgon</button></td>
+		<td><button id="xmen">Xmen</button></td>
+		<td><button id="comingsoon">Coming Soon</button></td>
+	</table>	
+
+	<script>
+	    $("#moveleft").click(function() { 
+			$("#redball").animate({"left":"-=50px"},"slow");
+		});
+		$("#movetop").click(function() {
+			$("#redball").animate({"top":"-=50px"},"slow");
+		});
+		$("#moveright").click(function() { 
+			$("#redball").animate({"left":"+=50px"},"slow");
+		});
+		$("#movebottom").click(function() {
+			$("#redball").animate({"top":"+=50px"},"slow");
+		});
+		$("#northwest").click(function() {
+			$("#redball").animate({"top":"-=50px","left":"-=50px"},"slow");
+		});
+		$("#southeast").click(function() {
+			$("#redball").animate({"top":"+=50px","left":"+=50px"},"slow");
+		});
+		$("#northeast").click(function() {
+			$("#redball").animate({"top":"-=50px","left":"+=50px"},"slow");
+		});
+		$("#southwest").click(function() {
+			$("#redball").animate({"top":"+=50px","left":"-=50px"},"slow");
+		});
+		$("#bounce").click(function() {
+			$("#redball").animate({"top":"-=80px","left":"+=80px"},"slow");
+			$("#redball").animate({"top":"+=508px","left":"+=508px"},"slow");
+			$("#redball").animate({"top":"-=475px","left":"+=475px"},"slow");
+			$("#redball").animate({"left":"-=1100px"},"slow");
+		});
+		$("#square").click(function() {
+			$("#redball").animate({"left":"-=150px"},"slow");
+			$("#redball").animate({"top":"-=150px"},"slow");
+			$("#redball").animate({"left":"+=150px"},"slow");
+			$("#redball").animate({"top":"+=150px"},"slow");
+		});
+		$("#triangle").click(function() {
+			$("#redball").animate({"top":"+=150px","left":"-=150px"},"slow");
+			$("#redball").animate({"left":"+=300px"},"slow");
+			$("#redball").animate({"top":"-=150px","left":"-=150px"},"slow");
+		});
+		$("#ocatgon").click(function() {
+			$("#redball").animate({"left":"+=50px"},"slow");
+			$("#redball").animate({"top":"+=50px","left":"+=50px"},"slow");
+			$("#redball").animate({"top":"+=50px"},"slow");
+			$("#redball").animate({"top":"+=50px","left":"-=50px"},"slow");
+			$("#redball").animate({"left":"-=50px"},"slow");
+			$("#redball").animate({"top":"-=50px","left":"-=50px"},"slow");
+			$("#redball").animate({"top":"-=50px"},"slow");
+			$("#redball").animate({"top":"-=50px","left":"+=50px"},"slow");
+		});
+		$("#xmen").click(function() {
+			$("#redball").animate({"top":"-=50px","left":"-=50px"},"slow");
+			$("#redball").animate({"top":"+=50px","left":"+=50px"},"slow");
+			$("#redball").animate({"top":"+=50px","left":"+=50px"},"slow");
+			$("#redball").animate({"top":"-=50px","left":"-=50px"},"slow");
+			$("#redball").animate({"top":"+=50px","left":"-=50px"},"slow");
+			$("#redball").animate({"top":"-=50px","left":"+=50px"},"slow");
+			$("#redball").animate({"top":"-=50px","left":"+=50px"},"slow");
+			$("#redball").animate({"top":"+=50px","left":"-=50px"},"slow");
+		});
+		$("#comingsoon").click(function() {
+			$("#redball").animate({"left":"-=150px"},"slow");
+			$("#redball").animate({"top":"-=150px"},"slow");
+			$("#redball").animate({"left":"+=150px"},"slow");
+			$("#redball").animate({"top":"+=150px"},"slow");
+			$("#redball").animate({"top":"-=50px","left":"-=50px"},"slow");
+			$("#redball").animate({"top":"+=50px","left":"+=50px"},"slow");
+			$("#redball").animate({"top":"+=50px","left":"+=50px"},"slow");
+			$("#redball").animate({"top":"-=50px","left":"-=50px"},"slow");
+			$("#redball").animate({"top":"+=50px","left":"-=50px"},"slow");
+			$("#redball").animate({"top":"-=50px","left":"+=50px"},"slow");
+			$("#redball").animate({"top":"-=50px","left":"+=50px"},"slow");
+			$("#redball").animate({"top":"+=50px","left":"-=50px"},"slow");
+			$("#redball").animate({"top":"+=150px","left":"-=150px"},"slow");
+			$("#redball").animate({"left":"+=300px"},"slow");
+			$("#redball").animate({"top":"-=150px","left":"-=150px"},"slow");
+		});	
+
+		$("#sayhello").click(function() {
+			alert("Ooh Rah Marine Corps");
+		});
+
+
+		 
+
+</script>
+</body>
+</html>
