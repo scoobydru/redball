@@ -9,6 +9,7 @@
 		left:50px;
 		top:50px;
 	}
+	
 </style>
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script>
@@ -134,7 +135,14 @@
 			$("#redball").animate({"top":"+=150px","left":"-=150px"},"slow");
 			$("#redball").animate({"left":"+=300px"},"slow");
 			$("#redball").animate({"top":"-=150px","left":"-=150px"},"slow");
+			$("#redball").animate({
+				width: "10%",
+				opacity: 0.4,
+				marginLeft: "0.6in",
+			}, 150);
 		});	
+        
+			
 
 		$("#sayhello").click(function() {
 			alert("Ooh Rah Marine Corps");
