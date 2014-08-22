@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	
+	<title>TTX</title>
+	<head>
+	</head>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<body bgcolor="#fcaf00">
+	<img src="Logo.png" alt="TTX Logo" height="100px" width="100px"></strong>
+	<form>
+                                <input type="text" placeholder="Search..." required>
+                                <input type="button" value="Search">
+</form>
+	<br><h1>Facilty Name</h1></br>
+	<br><img src="images/track.png"alt="track"></br>
+	<br><img src="images/track.png"alt="track"></br>
+	<br><img src="images/track.png"alt="track"></br>
+	<br><img src="images/track.png"alt="track"></br>
+	<br><img src="images/track.png"alt="track"></br>
+	
+		</body>
+		<script>
+		$(document).click(function(event) {
+			if(event.which == 32) {
+				event.preventDefault();
+				$('highlight_class').effect("highlight", {}, 3000);
+			}
+		});
+
+		</script>
+</html>

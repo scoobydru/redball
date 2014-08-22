@@ -1,0 +1,280 @@
+protected override void Seed(TrainTracker.Models.ApplicationDbContext context)
+{
+    context.Cars.AddOrUpdate(p => p.CarsId,
+       new Cars
+       {
+           CarsId = "1",
+           Car_Initials = "TTX",
+           Car_Number = "11111",
+           Car_Type = "flat",
+           Car_Length = "1",
+           Car_Status = "ready", 
+           Unit_Id = "1",  
+
+       },
+       new Cars
+       {
+           CarsId = "2",
+           Car_Initials = "TTX",
+           Car_Number = "11112",
+           Car_Type = "flat",
+           Car_Length = "1",
+           Car_Status = "just arived", 
+           Unit_Id = "2",  
+
+       },
+       new Cars
+       {
+           CarsId = "3",
+           Car_Initials = "TTX",
+           Car_Number = "11113",
+           Car_Type = "flat",
+           Car_Length = "2",
+           Car_Status = "ready", 
+           Unit_Id = "7",  
+
+       },
+       new Cars
+       {
+           CarsId = "4",
+           Car_Initials = "TTX",
+           Car_Number = "11114",
+           Car_Type = "flat",
+           Car_Length = "1",
+           Car_Status = "ready", 
+           Unit_Id = "8",  
+
+       },
+       new Cars
+       {
+           CarsId = "5",
+           Car_Initials = "TTX",
+           Car_Number = "11115",
+           Car_Type = "flat",
+           Car_Length = "1",
+           Car_Status = "cannot work", 
+           Unit_Id = "9",  
+
+       },
+       new Cars
+       {
+           CarsId = "6",
+           Car_Initials = "TTX",
+           Car_Number = "11116",
+           Car_Type = "flat",
+           Car_Length = "2",
+           Car_Status = "ready", 
+           Unit_Id = "12",  
+
+       },
+       new Cars
+       {
+           CarsId = "7",
+           Car_Initials = "TTX",
+           Car_Number = "11117",
+           Car_Type = "flat",
+           Car_Length = "1",
+           Car_Status = "ready to be released", 
+           Unit_Id = "13",  
+
+       },
+       new Cars
+       {
+           CarsId = "8",
+           Car_Initials = "TTX",
+           Car_Number = "11118",
+           Car_Type = "flat",
+           Car_Length = "1",
+           Car_Status = "ready", 
+           Unit_Id = "20",  
+
+       },
+       new Cars
+       {
+           CarsId = "9",
+           Car_Initials = "TTX",
+           Car_Number = "11119",
+           Car_Type = "flat",
+           Car_Length = "5",
+           Car_Status = "ready", 
+           Unit_Id = "21",  
+
+       },
+       new Cars
+       {
+           CarsId = "10",
+           Car_Initials = "TTX",
+           Car_Number = "11120",
+           Car_Type = "flat",
+           Car_Length = "1",
+           Car_Status = "ready", 
+           Unit_Id = "22",  
+
+       },
+       new Cars
+       {
+           CarsId = "11",
+           Car_Initials = "TTX",
+           Car_Number = "11121",
+           Car_Type = "flat",
+           Car_Length = "1",
+           Car_Status = "ready", 
+           Unit_Id = "39",  
+
+       },
+       new Cars
+       {
+           CarsId = "12",
+           Car_Initials = "TTX",
+           Car_Number = "11122",
+           Car_Type = "flat",
+           Car_Length = "2",
+           Car_Status = "ready to be released", 
+           Unit_Id = "40",  
+
+       },
+       new Cars
+       {
+           CarsId = "13",
+           Car_Initials = "TTX",
+           Car_Number = "11123",
+           Car_Type = "flat",
+           Car_Length = "1",
+           Car_Status = "ready", 
+           Unit_Id = "41",  
+
+       },
+       new Cars
+       {
+           CarsId = "14",
+           Car_Initials = "TTX",
+           Car_Number = "11124",
+           Car_Type = "box",
+           Car_Length = "1",
+           Car_Status = "ready", 
+           Unit_Id = "42",  
+
+       },
+       new Cars
+       {
+           CarsId = "15",
+           Car_Initials = "TTX",
+           Car_Number = "11125",
+           Car_Type = "box",
+           Car_Length = "1",
+           Car_Status = "just arrived", 
+           Unit_Id = "58",  
+
+       },
+       new Cars
+       {
+           CarsId = "16",
+           Car_Initials = "TTX",
+           Car_Number = "11126",
+           Car_Type = "box",
+           Car_Length = "1",
+           Car_Status = "ready", 
+           Unit_Id = "59",  
+
+       },
+       new Cars
+       {
+           CarsId = "17",
+           Car_Initials = "TTX",
+           Car_Number = "11127",
+           Car_Type = "box",
+           Car_Length = "1",
+           Car_Status = "ready", 
+           Unit_Id = "63",  
+
+       },
+       new Cars
+       {
+           CarsId = "18",
+           Car_Initials = "TTX",
+           Car_Number = "11128",
+           Car_Type = "box",
+           Car_Length = "5",
+           Car_Status = "ready", 
+           Unit_Id = "64",  
+
+       },
+       new Cars
+       {
+           CarsId = "19",
+           Car_Initials = "TTX",
+           Car_Number = "11129",
+           Car_Type = "box",
+           Car_Length = "1",
+           Car_Status = "ready to be released", 
+           Unit_Id = "65",  
+
+       },
+       new Cars
+       {
+           CarsId = "20",
+           Car_Initials = "TTX",
+           Car_Number = "11130",
+           Car_Type = "box",
+           Car_Length = "1",
+           Car_Status = "ready", 
+           Unit_Id = "66",  
+
+       },
+       new Cars
+       {
+           CarsId = "21",
+           Car_Initials = "TTX",
+           Car_Number = "11131",
+           Car_Type = "box",
+           Car_Length = "1",
+           Car_Status = "ready", 
+           Unit_Id = "31",  
+
+       },
+       new Cars
+       {
+           CarsId = "22",
+           Car_Initials = "TTX",
+           Car_Number = "11132",
+           Car_Type = "gondola",
+           Car_Length = "1",
+           Car_Status = "cannot work", 
+           Unit_Id = "32",  
+
+       },
+       new Cars
+       {
+           CarsId = "23",
+           Car_Initials = "TTX",
+           Car_Number = "11133",
+           Car_Type = "gondola",
+           Car_Length = "1",
+           Car_Status = "just arrived", 
+           Unit_Id = "33",  
+
+       },
+       new Cars
+       {
+           CarsId = "24",
+           Car_Initials = "TTX",
+           Car_Number = "11134",
+           Car_Type = "gondola",
+           Car_Length = "3",
+           Car_Status = "cannot work", 
+           Unit_Id = "14",  
+
+       },
+       new Cars
+       {
+           CarsId = "25",
+           Car_Initials = "TTX",
+           Car_Number = "11135",
+           Car_Type = "gondola",
+           Car_Length = "1",
+           Car_Status = "just arrived", 
+           Unit_Id = "15",  
+
+       },
+
+        

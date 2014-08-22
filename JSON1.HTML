@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<!--p id= "TTX"></p-->
+
+<div class = "Employees"></div>
+<div class = "Users"></div>
+<div class = "Yards"></div>
+<div class = "Tracks"></div>
+<div class = "Units"></div>
+<div class = "Cars"></div>
+
+<script>
+//var emtext = '{"employees"}';
+//var employee_info;
+
+var employees='{"emtext":[' +
+	 '{"firstName":"Andrew","lastName":"Phillips", "Id":"2853"},' +
+	 '{"firstName":"Shawn","lastName":"Price", "Id":"3582"},' +
+	 '{"firstName":"Dianne","lastName":"Poindexter","Id":"8352"}]}';
+	 	
+	 
+	obj = JSON.parse(employees);
+	for (i=0; i<=2; i++) {
+	
+	
+	//document.getElementById("TTX").innerHTML =
+	document.write("<p>" +obj.emtext[i].firstName + " " + obj.emtext[i].lastName + " " + obj.emtext[i].Id+ "</p>");
+	 
+	}
+
+/*var users= '{"ustext":[' +
+    '{"Id:"2853","userName":"APhillips", "password":"trackcar"},' +
+	'{"Id":"3582","userName":"SPrice", "password":"cartrack"},' +
+	'{"Id":"8352","userName":"DPoindexter","password":"ttxcars"}]}';
+
+	 obj = JSON.parse(users);
+	for (i=0; i<=2; i++) {
+	
+	
+	//document.getElementById("TTX").innerHTML =
+	document.write("<p>" +obj.ustext[i].Id + " " + obj.ustext[i]       .userName + " " + obj.ustext[i].password+ "</p>");
+	 
+	}*/
+
+
+
+</script>
+	
+	
+
+
+</body>
+	
+	</html>
+
+

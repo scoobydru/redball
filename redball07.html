@@ -1,0 +1,197 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<style>
+#yellow {
+  background-color:#ffff00;
+  position:absolute;
+  top:400px;
+  left:1000px;
+  width:30x;
+  heigth:90px;
+}
+#green {
+  background-color:#00cc00;
+  position:absolute;
+  top:400px;
+  left:20px;
+}
+#black {
+  background-color:#000000;
+  position:absolute;
+  top:30px;
+  left:1000px;
+}
+#red {
+  background-color:e60000;
+  position:absolute;
+  top:30px;
+}
+</style>
+<script>
+
+//declare global variables
+var thegame;
+thegame = new mygame;
+
+//create your object 
+function mygame(){
+  this.balls = [];
+//an object method to say something
+  this.sayhello = function (){
+    console.log ('hello world');
+  };
+  this.addball = function (jsonBall){ 
+    var newball = new ball();
+    jQuery.extend(newball, jsonBall);
+    this.balls.push(newball);
+    newball.show();
+  };
+  
+}
+
+function ball(){
+  var cssid;
+  var imgsrc;
+  var initialleft;
+  var initialtop;
+  this.debug = function (){
+     console.log ('my id is: ' + this.cssid);
+     console.log ('my image source is: ' + this.imgsrc);
+  };
+  this.show = function () {
+    var game = $("#game");
+    game.append("<img id='"+this.cssid+"' src='"+this.imgsrc+"'/>");
+    this.element = $("#" + this.cssid);
+    this.element.css({ position:'absolute',left:this.initialleft,top:this.initialtop });
+    
+  };
+  this.move=function(dx,dy){
+    this.element.animate({ "left": "+=" +dx+ "px", "top": "+=" +dy+ "px" }, "slow" );
+  };
+
+}
+
+$(document).ready (function(){
+  var server = new ajaxServiceLayer();
+  var ballsFromJSON = server.getballs();
+  for (i=0;i<ballsFromJSON.length;i++){
+    thegame.addball(ballsFromJSON[i]);
+  }
+  
+});
+
+function ajaxServiceLayer(){
+  this.getball = function(){
+    //name the return value
+    var retval;
+    /*
+    $.get("getball.aspx")
+      .done(function(data){
+        retval = JSON.parse(data);
+      });
+    */
+    //fake the server for now
+    //http://www.w3schools.com/json/json_syntax.asp
+    retval = JSON.parse('{"cssid":"redball","imgsrc":"http://www.icstars.org/files/redball.jpg","initialleft":100,"initialtop":100}');
+    
+    return retval;
+  };
+
+  this.getballs = function(){
+    //name the return value
+    var retval;
+    /*
+    $.get("getballs.aspx")
+      .done(function(data){
+        retval = JSON.parse(data);
+      });
+    */
+    //fake the server for now
+    //http://www.w3schools.com/json/json_syntax.asp
+    retval = JSON.parse('[{"cssid":"redball1","imgsrc":"Shiny round stress balls.jpg","initialleft":400,"initialtop":150},{"cssid":"greenball","imgsrc":"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRT5nO7tA12sYMVE9rQ8-ww7z7dln6I9tpORb2ytzNeIuwFVOiA","initialleft":600,"initialtop":100},{"cssid":"redball","imgsrc":"purple-stars-bowlingball-com-exclusive-30462.jpg","initialleft":300,"initialtop":300}, {"cssid":"redball3","imgsrc":"ten-pin-bowling-ball.jpg","initialleft":700,"initialtop":300}]');
+    
+    return retval;
+  };
+  
+}
+</script>
+</head>
+<body>
+<table id ="red"border ="7px solid">
+<tr>
+<td><button onclick="thegame.balls[0].move(-10,-10);">&#8662;</button></td>
+<td><button onclick="thegame.balls[0].move(0,-10);">&#8657;</button></td>
+<td><button onclick="thegame.balls[0].move(10,-10);">&#8663;</button></td>
+</tr>
+<tr>
+<td><button onclick="thegame.balls[0].move(-10,0);">&#8656;</button></td>
+<td><button onclick="thegame.balls[0].move(-7000,0);thegame.balls[1].move(-7000,0);thegame.balls[2].move(-7000,0);thegame.balls[3].move(-7000,0);thegame.balls[0].move(7000,0);thegame.balls[1].move(7000,0);thegame.balls[2].move(7000,0);thegame.balls[3].move(7000,0);">Coming Soon</button></td>
+<td><button onclick="thegame.balls[0].move(10,0);">&#8658;</button></td>
+</tr>
+<tr>
+<td><button onclick="thegame.balls[0].move(-10,10);">&#8665;</button></td>
+<td><button onclick="thegame.balls[0].move(0,10);"> &#8659;</button></td>
+<td><button onclick="thegame.balls[0].move(10,10);">&#8664;</button></td>
+</tr>
+</table>
+
+
+<table id="green" border="7px solid">
+<tr>
+<td><button onclick="thegame.balls[1].move(-10,-10);">&#8662;</button></td>
+<td><button onclick="thegame.balls[1].move(0,-10);">&#8657;</button></td>
+<td><button onclick="thegame.balls[1].move(10,-10);">&#8663;</button></td>
+</tr>
+<tr>
+<td><button onclick="thegame.balls[1].move(-10,0);">&#8656;</button></td>
+<td><button onclick="thegame.balls[1].move(-25,-25);thegame.balls[1].move(+50,0);thegame.balls[1].move(-25,+25);">confuss</button></td>
+<td><button onclick="thegame.balls[1].move(10,0);">&#8658;</button></td>
+</tr>
+<tr>
+<td><button onclick="thegame.balls[1].move(-10,10);">&#8665;</button></td>
+<td><button onclick="thegame.balls[1].move(0,10);"> &#8659;</button></td>
+<td><button onclick="thegame.balls[1].move(10,10);">&#8664;</button></td>
+</tr>
+</table>
+
+<table id="yellow", border ="7px solid yellow" >
+<tr>
+<td><button onclick="thegame.balls[2].move(-10,-10);">&#8662;</button></td>
+<td><button onclick="thegame.balls[2].move(0,-10);">&#8657;</button></td>
+<td><button onclick="thegame.balls[2].move(10,-10);">&#8663;</button></td>
+</tr>
+<tr>
+<td><button onclick="thegame.balls[2].move(-10,0);">&#8656;</button></td>
+<td><button onclick="thegame.balls[2].move(0,-10);thegame.balls[2].move(+10,0);thegame.balls[2].move(0,+10);thegame.balls[2].move(-10,0);">maybe</button></td>
+<td><button onclick="thegame.balls[2].move(10,0);">&#8658;</button></td>
+</tr>
+<tr>
+<td><button onclick="thegame.balls[2].move(-10,10);">&#8665;</button></td>
+<td><button onclick="thegame.balls[2].move(0,10);"> &#8659;</button></td>
+<td><button onclick="thegame.balls[2].move(10,10);">&#8664;</button></td>
+</tr>
+
+</table></div>
+
+
+<table border ="7px solid black" id="black">
+<tr>
+<td><button onclick="thegame.balls[3].move(-10,-10);">&#8662;</button></td>
+<td><button onclick="thegame.balls[3].move(0,-10);">&#8657;</button></td>
+<td><button onclick="thegame.balls[3].move(10,-10);">&#8663;</button></td>
+</tr>
+</div>
+<tr>
+<td><button onclick="thegame.balls[3].move(-10,0);">&#8656;</button></td>
+<td><button onclick="thegame.balls[3].move(0,-5);thegame.balls[3].move(0,5);thegame.balls[3].move(0,-5);thegame.balls[3].move(0,5);thegame.balls[3].move(0,-5);thegame.balls[3].move(0,5);thegame.balls[3].move(0,-5);thegame.balls[3].move(0,5);thegame.balls[3].move(0,-5);thegame.balls[3].move(0,5);thegame.balls[3].move(0,-5);thegame.balls[3].move(0,5);thegame.balls[3].move(0,-5);thegame.balls[3].move(0,5);thegame.balls[3].move(0,-5);thegame.balls[3].move(0,5);thegame.balls[3].move(0,-5);thegame.balls[3].move(0,5);thegame.balls[0].move(0,-5);thegame.balls[0].move(0,5);thegame.balls[0].move(0,-5);thegame.balls[0].move(0,5);thegame.balls[0].move(0,-5);thegame.balls[0].move(0,5);thegame.balls[0].move(0,-5);thegame.balls[0].move(0,5);thegame.balls[0].move(0,-5);thegame.balls[0].move(0,5);thegame.balls[0].move(0,-5);thegame.balls[0].move(0,5);thegame.balls[0].move(0,-5);thegame.balls[0].move(0,5);thegame.balls[0].move(0,-5);thegame.balls[0].move(0,5);thegame.balls[0].move(0,-5);thegame.balls[0].move(0,5);">why</button></td>
+<td><button onclick="thegame.balls[3].move(10,0);">&#8658;</button></td>
+<tr>
+<td><button onclick="thegame.balls[3].move(-10,10);">&#8665;</button></td>
+<td><button onclick="thegame.balls[3].move(0,10);"> &#8659;</button></td>
+<td><button onclick="thegame.balls[3].move(10,10);">&#8664;</button></td>
+</tr>
+
+<div id="game"></div>
+</body>
+</html>
