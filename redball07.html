@@ -2,24 +2,25 @@
 <head>
 <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 <style>
+#green {
+  background-color:#00cc00;
+  position:absolute;
+  top:30px;
+  left:1000px;
+}
 #yellow {
   background-color:#ffff00;
   position:absolute;
   top:400px;
-  left:1000px;
+  left:20px;
   width:30x;
   heigth:90px;
 }
-#green {
-  background-color:#00cc00;
-  position:absolute;
-  top:400px;
-  left:20px;
-}
+
 #black {
   background-color:#000000;
   position:absolute;
-  top:30px;
+  top:400px;
   left:1000px;
 }
 #red {
@@ -69,7 +70,7 @@ function ball(){
   this.move=function(dx,dy){
     this.element.animate({ "left": "+=" +dx+ "px", "top": "+=" +dy+ "px" }, "slow" );
   };
-
+  
 }
 
 $(document).ready (function(){
@@ -126,7 +127,7 @@ function ajaxServiceLayer(){
 </tr>
 <tr>
 <td><button onclick="thegame.balls[0].move(-10,0);">&#8656;</button></td>
-<td><button onclick="thegame.balls[0].move(-7000,0);thegame.balls[1].move(-7000,0);thegame.balls[2].move(-7000,0);thegame.balls[3].move(-7000,0);thegame.balls[0].move(7000,0);thegame.balls[1].move(7000,0);thegame.balls[2].move(7000,0);thegame.balls[3].move(7000,0);">Coming Soon</button></td>
+<td><button onclick="thegame.balls[0].move(-7000,0);thegame.balls[1].move(-7000,0);thegame.balls[2].move(7000,0);thegame.balls[3].move(7000,0);thegame.balls[0].move(7000,0);thegame.balls[1].move(7000,0);thegame.balls[2].move(-7000,0);thegame.balls[3].move(-7000,0);">Coming Soon</button></td>
 <td><button onclick="thegame.balls[0].move(10,0);">&#8658;</button></td>
 </tr>
 <tr>
